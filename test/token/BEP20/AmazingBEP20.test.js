@@ -15,7 +15,7 @@ contract('AmazingBEP20', function ([owner, other, thirdParty]) {
   const _decimals = new BN(8);
   const _initialSupply = new BN(100000000);
 
-  const fee = ether('0.1');
+  const fee = ether('0.001');
 
   beforeEach(async function () {
     this.serviceReceiver = await ServiceReceiver.new({ from: owner });
