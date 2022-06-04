@@ -7,7 +7,7 @@ const { shouldBehaveLikeOwnable } = require('../access/Ownable.behavior');
 const ServiceReceiver = artifacts.require('ServiceReceiver');
 
 contract('ServiceReceiver', function ([owner, thirdParty]) {
-  const fee = ether('0.1');
+  const fee = ether('0.001');
 
   context('ServiceReceiver behaviours', function () {
     beforeEach(async function () {
@@ -43,7 +43,7 @@ contract('ServiceReceiver', function ([owner, thirdParty]) {
               'ServiceMock',
               {
                 from: thirdParty,
-                value: fee.add(ether('1')),
+                value: fee.add(ether('0.001')),
               },
             ),
             'ServiceReceiver: incorrect price',
