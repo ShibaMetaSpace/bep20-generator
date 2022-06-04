@@ -7,7 +7,7 @@ const ServicePayer = artifacts.require('ServicePayerMock');
 const ServiceReceiver = artifacts.require('ServiceReceiver');
 
 contract('ServicePayer', function ([owner, thirdParty]) {
-  const fee = ether('0.1');
+  const fee = ether('0.001');
 
   context('ServicePayer behaviours', function () {
     beforeEach(async function () {
@@ -45,7 +45,7 @@ contract('ServicePayer', function ([owner, thirdParty]) {
           this.serviceReceiver.address,
           {
             from: owner,
-            value: fee.add(ether('1')),
+            value: fee.add(ether('0.001')),
           },
         ),
         'ServiceReceiver: incorrect price',
