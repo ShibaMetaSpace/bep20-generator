@@ -6,7 +6,7 @@
 
 The new Smart Contract Generator for BEP20 Token.
 
-## Try it
+## Try it..
 ------
 
 ## License
